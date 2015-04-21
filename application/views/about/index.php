@@ -35,15 +35,7 @@ if(isset($subtitle))
 }
 </style>
 <h3 style="color: black; font-size: 12pt; margin-bottom: 5px; margin-top: 10px;font-weight: bold; margin-left: 10px;">
-Nobi JMS Web Team : </h3>
-<div class="team">
-	<ul>
-		<li>Sarifudin (<a href="mailto:sarifudin@nobi.co.id">sarifudin@nobi.co.id</a>)</li>
-		<li>Haluanto Azis (<a href="mailto:azis@nobi.co.id">azis@nobi.co.id</a>)</li>
-		<li>Eko Hari (<a href="mailto:eko.hari@nobi.co.id">eko.hari@nobi.co.id</a>)</li>
-		<li>Jarot Puntoaji (<a href="mailto:jarot@nobi.co.id">jarot@nobi.co.id</a>)</li>
-	</ul>
-</div>
+
 <div class="software">
 	<h3 style="color: black; font-size: 12pt; margin-bottom: 5px; margin-top: 15px;font-weight: bold; margin-left: 10px;">
 	Software Developed By: 
@@ -52,6 +44,10 @@ Nobi JMS Web Team : </h3>
 		<li>Faris Rahman (<a href="mailto:farisais@hotmail.com">farisais@hotmail.com</a>)</li>
 	</ul>
 	<p>Mobile: +6285720074869</p>
+        <ul>
+		<li>Bartholomeus Priandika (<a href="mailto:b.priandika@gmail.com">b.priandika@gmail.com</a>)</li>
+	</ul>
+	<p>Mobile: +628118200872</p>
 </div>
 <div>
 	<h3 style="color: black; font-size: 12pt; margin-bottom: 5px; margin-top: 15px;font-weight: bold; margin-left: 10px;">
