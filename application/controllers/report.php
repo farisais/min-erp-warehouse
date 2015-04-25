@@ -95,7 +95,7 @@ class Report extends MY_Controller
         $result = exec($cmd);
         $file = $this->appsetting_model->get_app_config_by_name("temp_file_path") . $filename;
         echo $cmd;
-        $pdf = file_get_contents($filepath);
+        /*$pdf = file_get_contents($filepath);
         
         header('Content-Type: application/pdf');
         header('Cache-Control: public, must-revalidate, max-age=0'); 
@@ -106,7 +106,7 @@ class Report extends MY_Controller
         header('Content-disposition: attachment;filename=' . basename($file));
         ob_clean(); 
         flush(); 
-        echo $pdf;
+        echo $pdf;*/
     }
 }
 ?>
