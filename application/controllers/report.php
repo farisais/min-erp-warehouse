@@ -94,7 +94,7 @@ class Report extends MY_Controller
         $cmd = $this->appsetting_model->get_app_config_by_name("wkhtmltopdf_bin_path") . ' ' . $param . ' ' . $url . ' ' . $filepath . ' 2>&1';  
         $result = exec($cmd);
         $file = $this->appsetting_model->get_app_config_by_name("temp_file_path") . $filename;
-        echo $cmd;
+        echo $result;
         /*$pdf = file_get_contents($filepath);
         
         header('Content-Type: application/pdf');
