@@ -540,7 +540,7 @@ function SaveData()
 {
     var data_post = {};
     <?php 
-    if(isset($is_edit) && $data_edit[0]['status'] != 'void' )
+    if(isset($is_edit) && $data_edit[0]['status'] != 'void' || !isset($is_edit))
     {?>
     data_post['date'] = $("#delivery-date").val('date').format('yyyy-mm-dd');
     data_post['note'] = $("#notes").html();

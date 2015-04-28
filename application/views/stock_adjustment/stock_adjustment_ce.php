@@ -186,7 +186,7 @@ $(document).ready(function(){
         rendertoolbar: function (toolbar) {
             $("#add-product").click(function(){
                 var offset = $("#remove-product").offset();
-                $("#select-product-stock_adjustmentpup").jqxWindow({ stock_adjustmentsition: { x: parseInt(offset.left) + $("#remove-product").width() + 20, y: parseInt(offset.top)} });
+                $("#select-product-stock_adjustmentpup").jqxWindow({ position: { x: parseInt(offset.left) + $("#remove-product").width() + 20, y: parseInt(offset.top)} });
                 $("#select-product-stock_adjustmentpup").jqxWindow('open');
             });
             $("#remove-product").click(function(){
@@ -493,7 +493,7 @@ function DiscardData()
 <div id='form-container' style="font-size: 13px; font-family: Arial, Helvetica, Tahoma">
 
     <div class="form-center" style="padding: 30px;">
-        <div><h1 style="font-size: 18pt; font-weight: bold;">Purchase Order / <span><?php echo (isset($is_edit) ? $data_edit[0]['stock_adjustment_number'] : ''); ?></span></h1></div>
+        <div><h1 style="font-size: 18pt; font-weight: bold;">Stock Adjustment / <span><?php echo (isset($is_edit) ? $data_edit[0]['stock_adjustment_number'] : ''); ?></span></h1></div>
         <div>
             <table class="table-form">
                 <tr>

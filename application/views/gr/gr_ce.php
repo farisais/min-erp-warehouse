@@ -572,21 +572,22 @@ function SaveData()
 {
     var data_post = {};
     <?php 
-    if(isset($is_edit) && $data_edit[0]['status'] != 'void' )
+    if((isset($is_edit) && ($data_edit[0]['status'] != 'void' || $data_edit[0]['status'] == 'open' )) || !isset($is_edit) )
     {?>
-    
-    data_post['note'] = $("#notes").html();
-    data_post['date'] = $("#delivery-date").val('date').format('yyyy-mm-dd');
-    data_post['id_po'] = $("#po-no").val().value;
-    data_post['do'] = $("#do").val();
-    data_post['product_detail'] = $('#gr-product-grid').jqxGrid('getrows');
-    
-    data_post['is_edit'] = $("#is_edit").val(); 
-    data_post['id_gr'] = $("#id_gr").val(); 
-    
-    //alert(JSON.stringify(data_post))
-    load_content_ajax(GetCurrentController(), 71, data_post);
+        
+        data_post['note'] = $("#notes").html();
+        data_post['date'] = $("#delivery-date").val('date').format('yyyy-mm-dd');
+        data_post['id_po'] = $("#po-no").val().value;
+        data_post['do'] = $("#do").val();
+        data_post['product_detail'] = $('#gr-product-grid').jqxGrid('getrows');
+
+        data_post['is_edit'] = $("#is_edit").val(); 
+        data_post['id_gr'] = $("#id_gr").val(); 
+
+        //alert(JSON.stringify(data_post))
+        load_content_ajax(GetCurrentController(), 71, data_post);
     <?php   
+        
     }
     ?>
 }
