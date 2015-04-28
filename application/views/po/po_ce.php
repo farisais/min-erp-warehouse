@@ -713,9 +713,10 @@ function SaveData()
 {
     var data_post = {};
     <?php 
-    if((isset($is_edit) && ($data_edit[0]['status'] != 'void' || $data_edit[0]['status'] == 'draft' )) || !isset($is_edit) )
-    {?>
-    
+    if(isset($is_edit) && $data_edit[0]['status'] != 'void' || !isset($is_edit) )
+    {
+        if((isset($is_edit) && $data_edit[0]['status'] == 'draft' ) || !isset($is_edit) )
+            {?>
         data_post['date'] = $("#po-date").val('date').format('yyyy-mm-dd');
         data_post['note'] = $("#notes").html();
         data_post['po_number'] = $("#po-number").val();
@@ -738,7 +739,8 @@ function SaveData()
         data_post['id_po'] = $("#id_po").val(); 
         //alert(JSON.stringify(data_post));
         load_content_ajax(GetCurrentController(), 61, data_post);
-    <?php
+        <?php
+            }
     }
 
     ?>
