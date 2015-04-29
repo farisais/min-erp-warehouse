@@ -69,7 +69,7 @@ class payment_receipt extends MY_Controller
         return $data;   
     }
     
-    public function init_edit_payment_receipt($id)
+   /* public function init_edit_payment_receipt($id)
     {
         $data = array(
             "po" => $this->po_model->get_po_all(),
@@ -80,7 +80,7 @@ class payment_receipt extends MY_Controller
         );
         
         return $data;   
-    }
+    }*/
     
     public function get_payment_receipt_product_list()
     {

@@ -740,7 +740,7 @@ function SaveData()
         //alert(JSON.stringify(data_post));
         load_content_ajax(GetCurrentController(), 61, data_post);
         <?php
-            }
+           }
     }
 
     ?>
