@@ -578,7 +578,7 @@ function SaveData()
     }
     var data_post = {};
     <?php 
-    if(isset($is_edit) && $data_edit[0]['status'] != 'void' )
+    if(isset($is_edit) && $data_edit[0]['status'] != 'void' || !isset($is_edit) )
     {?>
     <?php
     if(!isset($is_edit) || (isset($is_edit) && $data_edit[0]['status'] == 'open'))
@@ -626,7 +626,7 @@ function DiscardData()
     if(!isset($is_view))
     {?>
     <?php 
-    if(!isset($is_edit) || (isset($is_edit) && ($data_edit[0]['status'] != 'close' && $data_edit[0]['status'] != 'cancel')))
+    if(!isset($is_edit) || (isset($is_edit) && $data_edit[0]['status'] != 'close' && $data_edit[0]['status'] != 'cancel'))
     {?>
     <button id="make-payment">Make Payment</button>
     <?php    

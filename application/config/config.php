@@ -15,9 +15,9 @@
 |
 */
 $config['base_url']	= '';
-$config['application_name'] = 'Desalite Management System';
-$config['company_name'] = 'PT. Desalite Tirtamas Teknologi';
-$config['company_logo'] = 'images/company_logo.png';
+$config['application_name'] = 'Web ERP PHP';
+$config['company_name'] = 'farisais';
+$config['company_logo'] = 'none';
 
 /*
 |--------------------------------------------------------------------------

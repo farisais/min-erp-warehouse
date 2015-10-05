@@ -3,10 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/var/www/desalite/application/controllers/dashboard.php</file>
-            <file>file:/var/www/desalite/application/core/MY_Controller.php</file>
-            <file>file:/var/www/desalite/application/models/appsetting_model.php</file>
-            <file>file:/var/www/desalite/application/config/database.php</file>
+            <file>file:/var/www/desalite/application/views/po/po_ce.php</file>
+            <file>file:/var/www/desalite/application/views/mr/mr_ce.php</file>
+            <file>file:/var/www/desalite/application/views/dn/dn_ce.php</file>
+            <file>file:/var/www/desalite/application/views/gr/gr_ce.php</file>
+            <file>file:/var/www/desalite/application/views/id/id_ce.php</file>
         </group>
     </open-files>
 </project-private>

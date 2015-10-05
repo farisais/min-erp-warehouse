@@ -36,16 +36,15 @@ class Report extends MY_Controller
     public function invoice_report_template()
     {
         $this->load->model('invoice_model');
-        $this->load->model('so_model');
         $po = $this->invoice_model->get_invoice_by_id($this->input->get('id'));
-        $po_product = $this->so_model->get_so_product_by_id($po[0]['so']);
+        $po_product = $this->invoice_model->get_detail_invoice($this->input->get('id'));
         $data = array();
         $data['company'] = $this->appsetting_model->get_app_config_by_name('company_name');
         $data['company_address'] = $this->appsetting_model->get_app_config_by_name('company_address');
-        $data['customer_address'] = $po[0]['address'];
-        $data['customer_name'] = $po[0]['customer_name'];
+        $data['customer_address'] = ''
+        $data['customer_name'] = '';
         $data['document_name'] = 'INVOICE';
-        $data['document_number'] = $po[0]['invoice_receipt_number'];
+        $data['document_number'] = $po[0]['invoice_number'];
         $data['document_date'] = date('d/m/Y', strtotime($po[0]['invoice_date']));
         $data['items'] = $po_product;
         $data['sub_total'] = $po[0]['sub_total'];
@@ -83,7 +82,7 @@ class Report extends MY_Controller
             break;
             case 'invoice':
                 $url = base_url() . 'report/invoice_report_template' . $url;
-                $param = '--page-size A5 --orientation landscape';
+                //$param = '--page-size A5 --orientation landscape';
             break;
             case 'dn':
                 $url = base_url() . 'report/dn_report_template' . $url;
